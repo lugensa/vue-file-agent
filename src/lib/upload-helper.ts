@@ -362,7 +362,10 @@ class UploadHelper {
       promise.then(
         (response) => {
           // delete fileRecord.tusUpload;
-          fileRecord.progress(100);
+	  fileRecord.progress(100);
+	  // mghh; this is a quick fix to make
+	  // url() available for prop fileRecords
+	  fileRecord.raw.url(response.url);
         },
         (err) => {
           this.prepareUploadError(fileRecord, err);
