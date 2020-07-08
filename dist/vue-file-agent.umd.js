@@ -2495,7 +2495,7 @@ var upload_helper_UploadHelper = /** @class */ (function () {
                 fileRecord.progress(100);
                 // mghh; this is a quick fix to make
                 // url() available for prop fileRecords
-                fileRecord.raw.url = function () { return response.url; };
+                fileRecord.urlValue = response.url;
             }, function (err) {
                 _this.prepareUploadError(fileRecord, err);
             });
